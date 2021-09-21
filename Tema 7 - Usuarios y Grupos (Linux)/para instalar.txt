@@ -1,0 +1,17 @@
+add guest additions
+
+sudo apt update
+
+sudo apt install tree
+
+sudo apt install grep
+
+sudo apt install tldr
+
+sudo apt install gparted
+
+sudo apt install sl
+
+sudo apt-get install zsh
+
+libre office

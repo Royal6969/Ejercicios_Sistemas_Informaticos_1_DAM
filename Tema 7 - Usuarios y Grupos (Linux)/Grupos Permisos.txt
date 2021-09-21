@@ -1,0 +1,37 @@
+crear un grupo:
+	sudo groupadd xxx
+crear usuario
+	sudo adduser xxx --ingroup xxx
+permiso lectura+escritura desde/para 1 usuario
+	sudo chmod u=rw,g=--,o=--- xxx
+Permiso lectura+escritura para un grupo
+	sudo chmod g=rw xxx
+Permiso lectura cualquier usuario
+	sudo chmod g=r,o=rw xxx
+Permisolectura+escritura usuarios del grupo
+	sudo chmod g=rw, o=r xxx
+Cambiar propietario y grupo de pertenencia de un fichero hacia otro usuario
+	sudo chmod usuario:grupo fichero
+Los programas instalados se guardan en:
+	raiz, usr, bin
+Permiso lectura carpeta a todos los usuarios:
+	chmod -R a+r xxx
+Restringir escritura excepto par ausuarios del grupo
+	chmod 764 xxx
+Restringir escritura excepto propietario, y lectura excepto usuarios del grupo
+	chmod 640 xxx
+Los grupos, usuarios, passwd, shadow , se encuentran en el etc de la raiz
+
+Comprobar gruppos del usuario actual logeado
+	groups xusuariox
+Otorgar permisos de admin a un usuario
+	sudo usermod -a -G sudo xusuariox
+Cambiar nombre a un usuario y el nombre de su carpeta de inicio
+	sudo usermod -d xNuevoNombrex xAntiguoNombrex
+	sudo usermod -l xNuevoNombrex xAntiguoNombrex
+Para que un usuario pueda leer el /var/log/syslog. hay que añadirlo al grupo:
+	sudo addgroup xUsuariox adm
+	groups xUsuariox (comprobación)
+Ver usuarios que pertenecen al grupo cdrom
+	abrir el archivo de group que hay en etc
+
